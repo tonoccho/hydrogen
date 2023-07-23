@@ -1,0 +1,16 @@
+{{ define "main" }}
+  <h1>{{ .Title }}</h1>
+  {{- if not .Date.IsZero }}
+    <div>
+      Date: {{ .Date | time.Format (default "2006/01/02" site.Params.DateFormat) }}
+    </div>
+  {{- end }} 
+  {{- if .Params.tags }}
+    <div>
+      Tags: {{- range ($.GetTerms "tags") }}
+        <a href="{{ .Permalink}}">{{ .LinkTitle }}</a>
+      {{- end }}
+    </div>
+  {{- end }} 
+  {{ .Content }} 
+{{ end }}
