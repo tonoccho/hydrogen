@@ -1,3 +1,12 @@
 @tailwind base;
 @tailwind components;
+
+.entry-card {
+    @apply w-3/12
+}
+
+.entry-card h3 {
+    @apply text-xl font-semibold
+}
+
 @tailwind utilities;
