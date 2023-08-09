@@ -11,10 +11,10 @@
         <!-- logo - end -->
   
         <!-- nav - start -->
-        <nav class="hidden gap-12 lg:flex">
+        <nav class="gap-12 lg:flex">
           {{- range site.Menus.main }}
             <a href="{{ .URL }}" class="text-lg font-semibold text-gray-600 transition duration-100 hover:text-indigo-500 active:text-indigo-700">{{ .Name }}</a>
-          {{- end }}
+          {{- end }}          
         </nav>
         <!-- nav - end -->
       </header>
