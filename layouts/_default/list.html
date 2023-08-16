@@ -11,7 +11,7 @@
   <div class="bg-white py-6 sm:py-8 lg:py-12">
     <div class="mx-auto max-w-screen-xl px-4 md:px-8">        
       <div class="grid gap-8 sm:grid-cols-2 sm:gap-12 lg:grid-cols-2 xl:grid-cols-2 xl:gap-16">
-        {{ range first 16 .Site.RegularPages.ByDate.Reverse }}
+        {{ range .Paginator.Pages }}
         <!-- article - start -->
         <div class="flex flex-col items-center gap-4 md:flex-row lg:gap-6">
           <a href="#" class="group relative block h-56 w-full shrink-0 self-start overflow-hidden rounded-lg bg-gray-100 shadow-lg md:h-24 md:w-24 lg:h-40 lg:w-40">
@@ -42,6 +42,11 @@
         </div>
         {{ end }}
         <!-- article - end -->
+    </div>
+    <div class="mx-auto max-w-screen-xl px-4 md:px-8">        
+      <div class="grid gap-8 sm:grid-cols-2 sm:gap-12 lg:grid-cols-2 xl:grid-cols-2 xl:gap-16">
+        {{ template "_internal/pagination.html" . }}
+      </div>
     </div>
   </div>
 {{ end }}

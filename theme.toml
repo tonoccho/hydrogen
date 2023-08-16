@@ -14,4 +14,9 @@ min_version = "0.41.0"
   name = "tonoccho"
   homepage = "https://github.com/tonoccho"
 
+[markup]
+  [markup.tableOfContents]
+    endLevel = 3
+    ordered = false
+    startLevel = 2
 
